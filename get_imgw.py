@@ -1,12 +1,11 @@
-#!/opt/miniconda37/bin/python
-import os, sys, json
+
+import os, sys
 import numpy as np
-import csv
 from datetime import datetime, timedelta
 import pandas as pd
-from coords_manager import *
+from . import coords_manager
 
-
+GLOBAL_PATH = os.path.join(os.getcwd(), "imgw_proceed")
 """
 imgw parameters - it is exatly number of column from special file
 """
@@ -99,19 +98,17 @@ def load_imgw_pl_stations(filter=False):
 
     return dataframe['lon'], dataframe['lat'], dataframe['stname']
 
+
 '''
 load a sequence map of imgw data in rowcol Poland representation
 '''
 def load_sequence_map(start, param=code_imgw_air_temp, forecast_hour_len=48):
-    spacetime = np.full((forecast_hour_len, Poland.xlen, Poland.ylen), 0.0)
+    spacetime = np.full((forecast_hour_len, coords_manager.Poland.xlen, coords_manager.Poland.ylen), 0.0)
     for it in range(forecast_hour_len):
         n = start+timedelta(hours=it)
         spacetime[it] = load_imgw_single(n.year, n.month, n.day, n.hour, param=param)
         print("y={} m={} d={} H={} loaded".format(n.year, n.month, n.day, n.hour))
     return spacetime
-
-
-
 
 
 '''
@@ -120,16 +117,17 @@ load a series for concrete localisation in rowcol Poland way
 def get_one_series(spacetime, rowcol):
     return spacetime[:, rowcol[0], rowcol[1]].flatten()
 
+
 '''
 make a map of weather parameter in a based of a IMGW synoptic stations
 '''
 def load_imgw_single(YEAR, MONTH, DAY, HOUR, param=code_imgw_air_temp):
     lat_imgw, lon_imgw, nointerpolated_value_imgw = load_imgw_data(YEAR, MONTH, DAY, HOUR, param)
-    row_imgw, col_imgw = latlon2rowcol(lat_imgw, lon_imgw)
+    row_imgw, col_imgw = coords_manager.latlon2rowcol(lat_imgw, lon_imgw)
     from scipy.interpolate import Rbf
     rbf = Rbf(row_imgw, col_imgw, nointerpolated_value_imgw, epsilon=0.02)
-    tiy = np.linspace(Poland.xmin, Poland.xmax, Poland.xlen)
-    tix = np.linspace(Poland.ymin, Poland.ymax, Poland.ylen)
+    tiy = np.linspace(coords_manager.Poland.xmin, coords_manager.Poland.xmax, coords_manager.Poland.xlen)
+    tix = np.linspace(coords_manager.Poland.ymin, coords_manager.Poland.ymax, coords_manager.Poland.ylen)
     YI, XI = np.meshgrid(tix, tiy)
     interpolated_value_imgw = rbf(XI, YI)
     return  np.array(interpolated_value_imgw)

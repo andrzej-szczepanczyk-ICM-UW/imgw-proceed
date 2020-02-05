@@ -1,10 +1,10 @@
 #!/opt/miniconda37/bin/python
 import matplotlib.pyplot as plt
-from get_imgw import *
-from coords_manager import *
 from pickle import load
+from . import coords_manager as cm
+import numpy as np
+from . import get_imgw
 
-GLOBAL_PATH = '/na/gpfs1/ARCHIWUM/ASzczepan/predictor-corrector-frosts'
 
 #TODO do poprawienia
 mask=None
@@ -16,10 +16,8 @@ def pickle2mask():
 #### VISUALISATION PART ####
 def visualise_rowcol_map(statistical_space, title, y_label_name, cmp, min, max):
 
-    x_corner, y_corner = Poland.xmin, Poland.ymin
-    LATgrid, LONgrid = get_latlons_ver2(statistical_space, x_corner, y_corner)
-
-    ss = flat_array(statistical_space)
+    x_corner, y_corner = cm.Poland.xmin, cm.Poland.ymin
+    LATgrid, LONgrid = cm.get_latlons_ver2(statistical_space, x_corner, y_corner)
 
     plt.rcParams.update({'font.weight': 'bold', 'font.size': 10.0, 'axes.titlesize': 14})
     plt.xlabel("longitude")
@@ -37,8 +35,8 @@ def visualise_rowcol_map(statistical_space, title, y_label_name, cmp, min, max):
     cbar.ax.set_ylabel(y_label_name)
     cbar.add_lines(LEVELS)
 
-    all_lat_stations, all_lon_stations, labels = load_imgw_pl_stations()
-    lat_stations, lon_stations, labels = load_imgw_pl_stations(filter=True)
+    all_lat_stations, all_lon_stations, labels = get_imgw.load_imgw_pl_stations()
+    lat_stations, lon_stations, labels = get_imgw.load_imgw_pl_stations(filter=True)
     plt.scatter(all_lat_stations, all_lon_stations, color="black", marker="+", s=8)
     for lat, lon, label in zip(lat_stations, lon_stations, labels):
         plt.text(lat+0.1, lon-0.1, label, color="black", fontsize=6)
@@ -49,9 +47,9 @@ def visualise_rowcol_map(statistical_space, title, y_label_name, cmp, min, max):
 
 
 def visualise_pickle2mask():
-    x_corner, y_corner = Poland.xmin, Poland.ymin
+    x_corner, y_corner = cm.Poland.xmin, cm.Poland.ymin
     mask = pickle2mask()
-    lat, lon = get_latlons(mask, x_corner, y_corner)
-    LATgrid, LONgrid = get_latlons_ver2(mask, x_corner, y_corner)
+    lat, lon = cm.get_latlons(mask, x_corner, y_corner)
+    LATgrid, LONgrid = cm.get_latlons_ver2(mask, x_corner, y_corner)
     FUNC = plt.contourf(LATgrid, LONgrid, mask)
     plt.show()

@@ -1,19 +1,13 @@
-#!/opt/miniconda37/bin/python
-
-import pickle_database
 import os
 import numpy as np
-from pickle import load, dump
+from pickle import *
+from . import pickle_database
 '''
 we have few representations ways for nodes localisation
 (lat, lon) for UM 'grid nodes'
 (row, col) for whole area (globalrowcol)
 (row, col) only for Polans see below - the most frequent presentation in these modules (namedtuplerowcol)
 '''
-
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#change accordingly with your localisation
-GLOBAL_PATH = '/home/admin/Pulpit/praca_meteo/dla_karoliny'
 
 from collections import *
 bounds = namedtuple('bounds', 'xmin xmax xlen ymin ymax ylen')
@@ -60,16 +54,16 @@ def flat_array(field):
 
 grid_type = "c"
 comp_type = "pgrid"
-directory = GLOBAL_PATH
+directory = os.getcwd()
 
 name1 = grid_type + '_grid'
 lat_name = "".join((grid_type,'5_',comp_type,'_lats.pkl'))
 lon_name = "".join((grid_type,'5_',comp_type,'_lons.pkl'))
 
-with open(os.path.join(directory,name1,lat_name),'rb') as f:
+with open(os.path.join(directory,'imgw_proceed',name1,lat_name),'rb') as f:
     lat = pickle_database.load(f)
 
-with open(os.path.join(directory,name1,lon_name),'rb') as f:      
+with open(os.path.join(directory,'imgw_proceed',name1,lon_name),'rb') as f:
     lon = pickle_database.load(f)
 
 
