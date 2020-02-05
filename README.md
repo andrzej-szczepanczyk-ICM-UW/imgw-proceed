@@ -1,6 +1,7 @@
 The documentation in html and rst still doesn't working. The authors of this module puts all efforts to complete this one.
 
 **INTRODUCTION: (koniecznie to przeczytaj !!!!)**
+
 we have few representations ways for nodes localisation
 (lat, lon) for UM 'grid nodes' - actually, temporally in c_grid/5_pgrid
 (row, col) for whole area (globalrowcol) - size (616, 448)
@@ -63,6 +64,7 @@ map - ta
 **visualise_rowcol_map(map, title, "temperatura", cm.brg, min, max)**
 
 **DEMO EXAMPLE**
+W pliku demo.py prezentuję przykład użycia funkcji
 
 
 
