@@ -28,12 +28,11 @@ print(series)
 #this piece of code generates whole september 2019 year
 spacetime = load_sequence_map(datetime(2019, 9, 1, 0), param=code_imgw_air_temp, forecast_hour_len=30*24)
 
-#here we have a boolean mask imported from Poland_mask_pkl
-#mask = pickle2mask()
-#from matplotlib.pyplot import imshow
-#print(mask)
+#here we have a boolean mask imported from Poland_mask.pkl
+mask = pickle2mask()
+from matplotlib.pyplot import imshow
 #dont't worry if it looks reversed - it is good !!
-#imshow(mask)
+imshow(mask)
 
 
 

@@ -14,7 +14,7 @@ More details in *coords_manager.py* under Poland - bound variable namedtuple typ
 
 
 **DEMO EXAMPLE (koniecznie wypróbuj dla komfortu !!!!)**
-W pliku demo.py prezentuję przykład użycia funkcji. Jeżeli pobierzesz projekt i to Jeżeli chciesz użyć funkcji w innym skrypcie python
+W pliku demo.py prezentuję przykłady użycia funkcji. Jeżeli pobierzesz projekt i to Jeżeli chciesz użyć funkcji w innym skrypcie python
 to musisz funkcje importować w taki sam sposób jak w demo.py i katalog również umiejscowić w odpowiednim miejscu w celu uniknięcia błędów importowania.
 
 
@@ -36,7 +36,7 @@ https://dane.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_meteorologiczne/termi
 
 *dane imgw/2019*
 
-pomiary ze stacji synoptycznych (jeżeli brakuje danychto można je dociągnąć z https://dane.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_meteorologiczne/terminowe/synop/)
+pomiary ze stacji synoptycznych (jeżeli brakuje danych to można je dociągnąć z https://dane.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_meteorologiczne/terminowe/synop/)
 
 *dane_imgw/'nazwapliku'.csv*
 
@@ -93,7 +93,7 @@ funkcja zwraca tablicę danych
 
 **---visualisation---**
 
-*plots.py*
+*coords_manager.py*
 **make_mask(my_bounds)**
 
 funkcja tworząca maskę danych 
@@ -101,6 +101,10 @@ my_bounds - *type namedtuple bounds* - jakie dokładnie wycięcie potrzebuję zr
 ta funkcja używa danych z eurostatu plików tzw. "nuts" i używam biblioteki geopandas 
 
 
+*plots.py*
+**pickle2mask()**
+
+Załaduj maskę z Poland_mask.pkl
 
 
 *plots.py*
