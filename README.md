@@ -13,9 +13,9 @@ we have few representations ways for nodes localisation
 More details in *coords_manager.py* under Poland - bound variable namedtuple type
 
 
-**DEMO EXAMPLE**
+**DEMO EXAMPLE (koniecznie wypróbuj dla komfortu !!!!)**
 W pliku demo.py prezentuję przykład użycia funkcji. Jeżeli pobierzesz projekt i to Jeżeli chciesz użyć funkcji w innym skrypcie python
-to musisz funkcje importować w taki sam sposób jak w demo.py i w tym samym miejscu co demo.py w celu uniknięcia błędów importowania.
+to musisz funkcje importować w taki sam sposób jak w demo.py i katalog również umiejscowić w odpowiednim miejscu w celu uniknięcia błędów importowania.
 
 
 najczęstrza forma przedstawienia daty to YEAR, MONTH, DAY, HOUR tzn 4 zmienne typu integer
@@ -38,7 +38,7 @@ https://dane.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_meteorologiczne/termi
 
 pomiary ze stacji synoptycznych (jeżeli brakuje danychto można je dociągnąć z https://dane.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_meteorologiczne/terminowe/synop/)
 
-*dane imgw/*.csv*
+*dane_imgw/'nazwapliku'.csv*
 
 lokalizacje stacji synoptycznych 
 
@@ -47,6 +47,11 @@ lokalizacje stacji synoptycznych
 pliki służące do wycinania maski polski i nie tylko! Jeżeli brakuje plików należy je ściągnąć stąd:
 
 https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts 
+
+*c_grid, p_grid*
+
+katalogi z plikami zawierającymi danymi dla różnych siatek dla różnych parametrów z różnych wersji UM. 
+
 
 **OPIS FUNKCJI: użytych w demo.py**
 
@@ -99,10 +104,17 @@ ta funkcja używa danych z eurostatu plików tzw. "nuts" i używam biblioteki ge
 
 
 *plots.py*
-**visualise_rowcol_map(map, title, str:y_label_name, cm.brg, min, max)**
+**visualise_rowcol_map(map, title, str:y_label_name, cmap:cm.brg, min, max)**
 
-Funkcja wizualizująca dane zinterpolowane dane IMGW dla całej powierzchni Polski.
-map
+*map* - tablica 2-wymiarowa, którą wizualizujemy właśnie
+
+*y_label_name* - etykieta i ops legendy
+
+*cmap* - wybrana kolormapa
+
+*min, max* - wartość minimalna i maksymalna parametru dla colormapy w wizualizacji - steruj tym parametrem głównie wtedy gdy zmieniasz parametr pogodowy
+
+Funkcja wizualizująca zinterpolowane dane IMGW dla całej powierzchni Polski.
 
 
 

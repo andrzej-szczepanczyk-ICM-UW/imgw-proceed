@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877908c2-60e8-49aa-9763-8adcf1108253" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/doctrees/conf.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/doctrees/environment.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/doctrees/imgw_proceed.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/doctrees/index.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/doctrees/main.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/doctrees/modules.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/.buildinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_sources/conf.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_sources/imgw_proceed.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_sources/index.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_sources/main.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_sources/modules.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/alabaster.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/basic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/comment-bright.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/comment-close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/comment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/doctools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/down-pressed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/pygments.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/searchtools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/underscore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/up-pressed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/_static/websupport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/conf.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/genindex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/imgw_proceed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/modules.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/objects.inv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/py-modindex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/html/searchindex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgw_proceed.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/make.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules.rst" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -385,14 +333,7 @@
       <workItem from="1581074114338" duration="7156000" />
       <workItem from="1581084573260" duration="2893000" />
       <workItem from="1581094342387" duration="1198000" />
-      <workItem from="1581097573281" duration="1916000" />
-    </task>
-    <task id="LOCAL-00005" summary="correct some code in order to compile state for 16 october (wednesday) 2019 17:00">
-      <created>1571325413044</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1571325413044</updated>
+      <workItem from="1581097573281" duration="3032000" />
     </task>
     <task id="LOCAL-00006" summary="write get_old_imgw before a testing">
       <created>1571330038704</created>
@@ -730,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581094945848</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="add one shape">
+      <created>1581099525994</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1581099525994</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
