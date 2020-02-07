@@ -50,7 +50,8 @@ https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-un
 
 *c_grid, p_grid*
 
-katalogi z plikami zawierającymi danymi dla różnych siatek dla różnych parametrów z różnych wersji UM. 
+katalogi z plikami zawierającymi danymi dla różnych siatek dla różnych parametrów z różnych wersji UM. Pamiętaj sprawdzeniu czy prawidłowo ustawiłaś zmienne *grid_type = "c"* oraz
+*comp_type = "pgrid"* w momencie jak zmieniasz parametr pogodowy lub pobierasz z dawniejszych danych niż 2019 r. W razie problemów pytaj Mateusza o pakiet UM_utils/coords bo od niego to przekopiowałem. Informacja powinna się chyba znaleźć u niego w UM_utils/fields.json. UM_utils albo MM_utils nie pamiętam...
 
 
 **OPIS FUNKCJI: użytych w demo.py**
@@ -60,7 +61,7 @@ katalogi z plikami zawierającymi danymi dla różnych siatek dla różnych para
 *get_imgw.py:*
 **load_imgw_single(int:YEAR, int:MONTH, int:DAY, int:HOUR, int:weather_feature)**
 
-Załaduj 2-wymiarową mapę parametru pogodowego (weather feature) w reprezentacji (row, col) dla Polski.
+Załaduj 2-wymiarową mapę parametru pogodowego w reprezentacji (row, col) dla Polski.
 Zostało to otrzymane na podstawie interpolacji danych ze stacji synoptycznych za pomocą interpolatora scipy.interpolate.Rbf (radial basis function)
 Wartość zwracana to tablica dwuwymiarowa
 

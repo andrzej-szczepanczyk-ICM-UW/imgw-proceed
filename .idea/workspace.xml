@@ -4,8 +4,6 @@
     <list default="true" id="877908c2-60e8-49aa-9763-8adcf1108253" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgw_proceed/nuts/NUTS_RG_01M_2016_4326_LEVL_0.shp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -336,14 +334,7 @@
       <workItem from="1581074114338" duration="7156000" />
       <workItem from="1581084573260" duration="2893000" />
       <workItem from="1581094342387" duration="1198000" />
-      <workItem from="1581097573281" duration="3558000" />
-    </task>
-    <task id="LOCAL-00007" summary="write tests for get_old_imgw">
-      <created>1571330379618</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1571330379618</updated>
+      <workItem from="1581097573281" duration="4401000" />
     </task>
     <task id="LOCAL-00008" summary="write rowcol2imgwcode function and modify display_statiscic function">
       <created>1571332523036</created>
@@ -681,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581100687786</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="small modification">
+      <created>1581101169398</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1581101169398</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -704,7 +702,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/imgw_proceed" />
     </ignored-roots>
-    <MESSAGE value="introduce bool option display or not display" />
     <MESSAGE value="refaktoryzacja funkcji compare_um_imgw_..." />
     <MESSAGE value="refaktoryzacja kodu" />
     <MESSAGE value="refaktoryzacja kodu - ciąg dalszy" />
@@ -729,7 +726,8 @@
     <MESSAGE value="change location of files" />
     <MESSAGE value="add one shape" />
     <MESSAGE value="correct readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct readme" />
+    <MESSAGE value="small modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="small modification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
